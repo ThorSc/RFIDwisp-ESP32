@@ -2,8 +2,8 @@
 
 Standalone firmware for the WT32-SC01 Plus (ESP32-S3, 3.5" touch display)
 plus a PN532 RFID module: reads and writes the same QIDI spool tags as the
-[RFIDwisp](https://github.com/ThorSc/RFIDwisp) PC app, with Moonraker and
-Spoolman integration, over Wi-Fi - no PC needed.
+[RFIDwisp](https://github.com/ThorSc/RFIDwisp) PC app, with Spoolman
+integration, over Wi-Fi - no PC needed.
 
 This repo holds **releases only** (prebuilt firmware binaries). The source
 is developed in a private repository and published here automatically when
@@ -24,10 +24,11 @@ build. Each release contains:
 
 - Reads and writes the 16-byte QIDI spool tag (MIFARE Classic 1K) with a
   PN532 reader.
-- Shows a QIDI box's material slots live from Moonraker.
-- Creates/links Spoolman spools when writing a tag.
-- Supports several printers, configured via a Wi-Fi captive portal on first
-  boot plus an on-device settings screen.
+- Connects to Spoolman over Wi-Fi: pick an existing spool or filament
+  (shown with its colour) or create a new spool, and the tag is written with
+  the matching material, colour, vendor, spool number and weight.
+- Landscape touch UI; Wi-Fi and Spoolman address are set up through a
+  captive portal on first boot and an on-device settings screen.
 
 ## Wiring and setup
 
