@@ -7,7 +7,7 @@ integration, over Wi-Fi - no PC needed.
 
 This repo holds **releases only** (prebuilt firmware binaries), published
 here automatically when a version is released. The source is developed in
-[`ThorSc/RFIDwisp-ESP32-dev`](https://github.com/ThorSc/RFIDwisp-ESP32-dev).
+[`ThorSc/RFIDwisp-Terminal-dev`](https://github.com/ThorSc/RFIDwisp-Terminal-dev).
 
 ## Downloads
 
