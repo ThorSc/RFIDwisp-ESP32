@@ -6,6 +6,38 @@ documented in this file. The version is the one in `VERSION`.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.7.0] - 2026-10-11
+
+### Changed
+
+- The main screen has one button, "Edit tag"; "Write tag" and "Read tag" are gone from there. "Edit tag" opens
+  the edit screen with empty fields, whether a tag lies on the reader or not (a tag on the reader is read and
+  shown on its own). A blank tag, or one without valid spool data, also opens the empty edit screen, with the
+  reason in the status line.
+- A tag that was read earlier and still lies on the reader is found again by "Write tag" / "Read tag" on the
+  edit screen without taking it away first.
+- A tag put on the reader is detected automatically while the main screen is showing: the terminal reads it and
+  opens the edit screen with its data, no button press needed. The tag has to be taken away before the same tag is read again.
+- The status line is at the bottom edge of the main and edit screens.
+- The edit screen has a "Read tag" button next to "Write tag" and "Back", to read another tag without
+  returning to the main screen.
+- The settings screen has tabs like the RFIDwisp app: General (screen sleep, firmware update and version),
+  WiFi (status, reconfigure network), Printer and Spoolman (address, use Spoolman).
+
+### Added
+
+- Languages: English and German. A list with flags in Settings > General switches the language (the terminal
+  restarts to apply it); the choice is stored on the device. The error messages of the firmware update, the
+  Wi-Fi texts and the setup portal's labels are translated as well. The fonts are now rendered from a Montserrat
+  TrueType file in flash, so umlauts work.
+- QIDI box overview on the main screen, like the app's QIDI Data frame: the four slots of a box with state
+  (empty / loaded / feeding), slot number, material, colour, spool number, Spoolman vendor and remaining weight.
+  With more than one printer a drop-down chooses the printer, with more than one box a second one the box. The
+  data is read from the printer's Moonraker in the background (QIDI Plus4 / Max4; the Q2 is not supported) and
+  refreshed with the refresh button, on a change of printer or box and when leaving the settings.
+- Printers: the Printer tab lists the configured printers (name and Moonraker address) and adds, edits and
+  deletes them, like the app. They are stored on the device.
+
 ## [0.6.2] - 2026-10-06
 
 ### Fixed
